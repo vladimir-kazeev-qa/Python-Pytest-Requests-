@@ -8,3 +8,4 @@ def test_status_code():
 
 def test_part_of_response():
      response_get_pokemon_query = requests.get(url = f'{Vars.URL}/trainers',params = {'trainer_id' : Vars.TRAINER_ID})
+     assert response_get_pokemon_query.json()["data"][0]["trainer_name"] == 'Ubuntutu'
